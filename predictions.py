@@ -62,9 +62,15 @@ with open(os.path.join(resultPath, "prediction_mask.csv"), "w") as outputMask:
             if mask == 1025:
                 fromMask += (age * 8)
                 ran += 8
+            if mask == 16385:
+                fromMask += (age * 6)
+                ran += 6
             if mask == 32769:
                 fromMask += (age * 12)
                 ran += 12
+            if mask == 1048577:
+                fromMask += (age * 7)
+                ran += 7
         avg = avg / len(row.indices)
         fromMask = fromMask / ran
         writerMask.writerow([user, int(fromMask)])
