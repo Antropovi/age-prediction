@@ -54,19 +54,19 @@ with open(os.path.join(resultPath, "prediction_mask.csv"), "w") as outputMask:
             avg += age
             fromMask += age
             if mask == 33:
-                fromMask += (age * 5)
+                fromMask += (age * 6)
                 ran += 5
             if mask == 257:
                 fromMask += (age * 8)
                 ran += 8
             if mask == 1025:
-                fromMask += (age * 8)
+                fromMask += (age * 7)
                 ran += 8
             if mask == 16385:
                 fromMask += (age * 6)
                 ran += 6
             if mask == 32769:
-                fromMask += (age * 12)
+                fromMask += (age * 13)
                 ran += 12
             if mask == 1048577:
                 fromMask += (age * 7)
